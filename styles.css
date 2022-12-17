@@ -3,3 +3,79 @@
     margin: 0;
     padding: 0;
 }
+
+html{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+    
+@keyframes background-anim {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    justify-content: left;
+    padding: 1rem;
+    padding-left: 8rem;
+
+    background: linear-gradient(45deg, #1a1a1a, #808080);
+    background-size: 100% 200%;
+    
+    animation: background-anim 10s ease infinite;
+}
+
+#mainContent{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    transition: all .5s linear;
+}
+
+.about h1{
+    margin-top: 2rem;
+    color: aliceblue;
+    font-size: 2em;
+}
+.about p{
+    color: aliceblue;
+    padding-right: 4rem;
+    padding-top: 3rem;
+    font-size: 1.3em;
+}
+
+.interest h3{
+    font-size: 1.8em;
+    color: azure;
+}
+
+.interest ul{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    color: azure;
+}
+.interest li{
+    font-size: 1.2em;
+    padding-top: 1rem;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.interest li:hover{
+    padding-left: 1rem;
+    color: #dddddd;
+    margin-left: -0.5rem;
+}
+
+.not-loaded{
+    position: absolute;
+    top: -100vh;
+}
+.loaded{
+    position:absolute;
+    top: 1rem;
+}
